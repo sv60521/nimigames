@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ミニゲームサイト</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; background: #f4f4f4; }
+    h1 { color: #333; }
+    .game-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 660px; /* 3列×200px + gapで幅調整 */
+      margin: 0 auto;
+    }
+    .game {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 10px;
+      width: 200px;
+      flex: 0 0 200px; /* 横幅固定 */
+    }
+    iframe {
+      width: 100%;
+      height: 150px;
+      border: none;
+      border-radius: 8px;
+    }
+    a { display: block; margin-top: 10px; color: #007bff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>🎮 ミニゲームサイト 🎮</h1>
+  <div class="game-list">
+    <div class="game">
+      <iframe src="Game1_WebGL/index.html"></iframe>
+      <a href="Game1_WebGL/index.html">2Dアクション</a>
+    </div>
+    <div class="game">
+      <iframe src="Game2_WebGL/index.html"></iframe>
+      <a href="Game2_WebGL/index.html">ブロック崩し</a>
+    </div>
+    <div class="game">
+      <iframe src="Game3_WebGL/index.html"></iframe>
+      <a href="Game3_WebGL/index.html">テトリス</a>
+    </div>
+    <div class="game">
+      <iframe src="Game4_WebGL/index.html"></iframe>
+      <a href="Game4_WebGL/index.html">ヘビ</a>
+    </div>
+    <div class="game">
+      <iframe src="Game5_WebGL/index.html"></iframe>
+      <a href="Game5_WebGL/index.html">土管避け</a>
+    </div>
+    <div class="game">
+      <iframe src="Game6_WebGL/index.html"></iframe>
+      <a href="Game6_WebGL/index.html">2Dランゲーム</a>
+    </div>
+  </div>
+</body>
+</html>
+
+
