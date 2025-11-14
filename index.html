@@ -4,56 +4,106 @@
   <meta charset="UTF-8">
   <title>ミニゲームサイト</title>
   <style>
-    body { font-family: sans-serif; text-align: center; background: #f4f4f4; }
-    h1 { color: #333; }
-    .game-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 660px; /* 3列×200px + gap */
-      margin: 0 auto;
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #f4f4f4;
     }
+
+    h1 { color: #333; }
+
+    /* 横3 × 縦2 */
+    .game-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 横3列 */
+      gap: 20px;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* 各ゲームカード */
     .game {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       padding: 10px;
-      width: 200px;
-      flex: 0 0 200px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    iframe {
+
+    /* 画像（サムネイル） */
+    .thumb {
       width: 100%;
-      height: 150px;
-      border: none;
-      border-radius: 8px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
     }
-    a { display: block; margin-top: 10px; color: #007bff; text-decoration: none; }
+
+    /* ホバーしたとき少し拡大 */
+    .thumb:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      display: block;
+      margin-top: 10px;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
+
   <h1>🎮 ミニゲームサイト 🎮</h1>
+
   <div class="game-list">
+
     <div class="game">
-      <iframe src="Game1/index.html"></iframe>
-      <a href="Game1/index.html">2Dアクション</a>
+      <a href="Game1/index.html">
+        <img class="thumb" src="Game1.png" alt="ゲーム1">
+      </a>
+      <a href="Game1/index.html">2Dアクションで遊ぶ</a>
     </div>
+
     <div class="game">
-      <iframe src="Game2/index.html"></iframe>
-      <a href="Game2/index.html">ブロック崩し</a>
+      <a href="Game2/index.html">
+        <img class="thumb" src="Game2.png" alt="ゲーム2">
+      </a>
+      <a href="Game2/index.html">ブロック崩しで遊ぶ</a>
     </div>
+
     <div class="game">
-      <iframe src="Game3/index.html"></iframe>
-      <a href="Game3/index.html">テトリス</a>
+      <a href="Game3/index.html">
+        <img class="thumb" src="Game3.png" alt="ゲーム3">
+      </a>
+      <a href="Game3/index.html">テトリスで遊ぶ</a>
     </div>
+
     <div class="game">
-      <iframe src="Game4/index.html"></iframe>
-      <a href="Game4/index.html">ヘビ</a>
+      <a href="Game4/index.html">
+        <img class="thumb" src="Game4.png" alt="ゲーム4">
+      </a>
+      <a href="Game4/index.html">ヘビで遊ぶ</a>
     </div>
+
     <div class="game">
-      <iframe src="Game5/index.html"></iframe>
-      <a href="Game5/index.html">土管避け</a>
+      <a href="Game5/index.html">
+        <img class="thumb" src="Game5.png" alt="ゲーム5">
+      </a>
+      <a href="Game5/index.html">土管避けで遊ぶ</a>
     </div>
+
+    <div class="game">
+      <a href="Game6/index.html">
+        <img class="thumb" src="Game6.png" alt="ゲーム6">
+      </a>
+      <a href="Game6/index.html">2Dランで遊ぶ</a>
+    </div>
+
+  </div>
+
 </body>
 </html>
 
