@@ -12,17 +12,15 @@
 
     h1 { color: #333; }
 
-    /* 横3 × 縦2 */
     .game-list {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 横3列 */
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       max-width: 1500px;
       margin: 0 auto;
       padding: 20px;
     }
 
-    /* 各ゲームカード */
     .game {
       background: white;
       padding: 10px;
@@ -30,7 +28,6 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    /* 画像（サムネイル） */
     .thumb {
       width: 100%;
       height: 300px;
@@ -40,7 +37,6 @@
       transition: transform 0.2s;
     }
 
-    /* ホバーしたとき少し拡大 */
     .thumb:hover {
       transform: scale(1.05);
     }
@@ -78,7 +74,7 @@
       <a href="Game3/index.html">
         <img class="thumb" src="Game3.png" alt="ゲーム3">
       </a>
-      <a href="Game3/index.html">テトリスで遊ぶ</a>
+      <a href="Game3/index.html">テトリス風ゲームで遊ぶ</a>
     </div>
 
     <div class="game">
